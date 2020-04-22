@@ -16,7 +16,7 @@ class Hcxtools < Formula
     ENV.prepend "CPPFLAGS", "-I#{Formula["openssl@1.1"].opt_include}"
     ENV.prepend "LDFLAGS", "-L#{Formula["openssl@1.1"].opt_lib}"
 
-    bin.install
+    system "make", "install", "prefix=#{prefix}"
   end
 
   test do
