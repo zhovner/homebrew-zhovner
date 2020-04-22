@@ -16,7 +16,26 @@ class Hcxtools < Formula
     ENV.prepend "CPPFLAGS", "-I#{Formula["openssl@1.1"].opt_include}"
     ENV.prepend "LDFLAGS", "-L#{Formula["openssl@1.1"].opt_lib}"
 
-    system "make", "install", "prefix=#{prefix}"
+    system "make"
+    bin.install "hcxessidtool",
+                "hcxhash2cap",
+                "hcxhashcattool",
+                "hcxhashtool",
+                "hcxmactool",
+                "hcxpcapngtool",
+                "hcxpcaptool",
+                "hcxpmkidtool",
+                "hcxpsktool",
+                "hcxwltool",
+                "whoismac",
+                "wlancap2wpasec",
+                "wlanhcx2john",
+                "wlanhcx2ssid",
+                "wlanhcxcat",
+                "wlanhcxinfo",
+                "wlanjohn2hcx",
+                "wlanpmk2hcx",
+                "wlanwkp2hcx"
   end
 
   test do
